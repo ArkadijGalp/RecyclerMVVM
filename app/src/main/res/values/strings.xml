@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RecyclerHomework</string>
+    <string name="select_the_list_of_graphic_cards">Select the list of graphic cards</string>
+    <string name="card_s_model">Card\'s model</string>
+    <string name="graphic_cards">Graphic Cards</string>
+    <string name="graphiccard">Card\'s name</string>
+    <string name="graphic_cardsss">Graphic Cards</string>
+    <string name="Brand_name">BrandName</string>
+</resources>
