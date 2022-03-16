@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.graphiccard_item_view.view.*
 import space.arkady.recyclerhomework.R
-import space.arkady.recyclerhomework.domain.domain.models.GraphicCardItem
+import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
 class GraphicCardViewHolder(
     itemView: View,
@@ -24,7 +24,7 @@ class GraphicCardViewHolder(
     }
 
 
-    fun bindItem(grCard: GraphicCardItem) {
+    fun bindItem(grCard: CommonItem) {
         with(grCard) {
             itemView.nameProduct.text = grCard.item
             if (grCard.item.contains("NVIDIA")) {

@@ -1,11 +1,14 @@
 package space.arkady.recyclerhomework.domain.domain
 
-import space.arkady.recyclerhomework.domain.domain.models.GraphicCardItem
-import space.arkady.recyclerhomework.domain.toGraphicCardList
+import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
-class GraphicCardInteractorImplement(private val repository: GraphicCardRepository) :
-    GraphicCardInteractor {
-    override fun getGraphicCards(): List<GraphicCardItem> {
-        return repository.getGraphicCardList().toGraphicCardList()
+class GraphicCardInteractorImplement(
+    private val repository: GraphicCardRepository
+) :
+    CommonInteractor<CommonItem> {
+    override fun getItem(): List<CommonItem> {
+        return repository.getGraphicCardList().map { item ->
+            CommonItem("${item.brand} ${item.number} ${item.postfix} ${item.series}")
+        }
     }
 }

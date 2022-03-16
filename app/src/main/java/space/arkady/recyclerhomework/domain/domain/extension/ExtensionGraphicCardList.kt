@@ -1,11 +1,11 @@
 package space.arkady.recyclerhomework.domain
 
 import space.arkady.recyclerhomework.domain.domain.models.GraphicCard
-import space.arkady.recyclerhomework.domain.domain.models.GraphicCardItem
+import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
-fun List<GraphicCard>.toGraphicCardList(): List<GraphicCardItem> {
+fun List<GraphicCard>.toGraphicCardList(): List<CommonItem> {
     return this.map { item ->
-        GraphicCardItem(
+        CommonItem(
             "${item.brand}${item.number}${item.postfix}${item.series}"
         )
     }

@@ -4,15 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import space.arkady.recyclerhomework.data.GraphicCardRepositoryImplement
-import space.arkady.recyclerhomework.domain.domain.GraphicCardInteractor
 import space.arkady.recyclerhomework.domain.domain.GraphicCardInteractorImplement
 import space.arkady.recyclerhomework.domain.domain.GraphicCardRepository
-import space.arkady.recyclerhomework.domain.domain.models.GraphicCardItem
+import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
 class GraphicCardViewModel : ViewModel() {
 
-    val graphicLiveData: LiveData<List<GraphicCardItem>> get() = _graphicLiveData
-    private val _graphicLiveData = MutableLiveData<List<GraphicCardItem>>()
+    val graphicLiveData: LiveData<List<CommonItem>> get() = _graphicLiveData
+    private val _graphicLiveData = MutableLiveData<List<CommonItem>>()
     private val repository: GraphicCardRepository = GraphicCardRepositoryImplement
     private val interactor: GraphicCardInteractor = GraphicCardInteractorImplement(repository)
 

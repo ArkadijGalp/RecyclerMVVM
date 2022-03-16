@@ -2,5 +2,10 @@ package space.arkady.recyclerhomework.domain.domain.models
 
 enum class Brand {
     AMD,
-    NVIDIA
+    NVIDIA,
+    LG,
+    SAMSUNG,
+    GIGABYTE,
+    ACER,
+    DELL
 }

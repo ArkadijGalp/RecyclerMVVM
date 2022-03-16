@@ -3,12 +3,12 @@ package space.arkady.recyclerhomework.presentation.recycler
 import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import space.arkady.recyclerhomework.domain.domain.models.GraphicCardItem
+import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
 class GraphicCardAdapter(private val getCardClickItem: GraphicCardClickListener) :
     RecyclerView.Adapter<GraphicCardViewHolder>() {
 
-    private var items: List<GraphicCardItem> = emptyList()
+    private var items: List<CommonItem> = emptyList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GraphicCardViewHolder {
         return GraphicCardViewHolder.newInstance(parent, getCardClickItem)
     }
@@ -20,7 +20,7 @@ class GraphicCardAdapter(private val getCardClickItem: GraphicCardClickListener)
     override fun getItemCount() = items.size
 
     @SuppressLint("NotifyDataSetChanged")
-    fun submitCardList(data: List<GraphicCardItem>) {
+    fun submitCardList(data: List<CommonItem>) {
         items = data
 
         notifyDataSetChanged()

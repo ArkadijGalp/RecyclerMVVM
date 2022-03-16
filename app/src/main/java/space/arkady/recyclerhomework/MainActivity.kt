@@ -3,7 +3,7 @@ package space.arkady.recyclerhomework
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import space.arkady.recyclerhomework.domain.domain.models.GraphicCardItem
+import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 import space.arkady.recyclerhomework.presentation.recycler.GraphicCardClickListener
 import space.arkady.recyclerhomework.presentation.recycler.GraphicCardViewModel
 import space.arkady.recyclerhomework.presentation.recycler.fragment.GraphicCardFragment
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val getGraphicCard = object : GraphicCardClickListener {
-        override fun graphicCardListener(item: GraphicCardItem) {
+        override fun graphicCardListener(item: CommonItem) {
             selectGraphicCard.setText(item.item)
         }
 

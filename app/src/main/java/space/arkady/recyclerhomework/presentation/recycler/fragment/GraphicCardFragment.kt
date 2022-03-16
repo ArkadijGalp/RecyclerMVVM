@@ -8,7 +8,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_dialog_graphiccard.*
 
 import space.arkady.recyclerhomework.R
-import space.arkady.recyclerhomework.domain.domain.models.GraphicCardItem
+import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 import space.arkady.recyclerhomework.presentation.recycler.GraphicCardAdapter
 import space.arkady.recyclerhomework.presentation.recycler.GraphicCardClickListener
 import space.arkady.recyclerhomework.presentation.recycler.GraphicCardViewModel
@@ -20,7 +20,7 @@ class GraphicCardFragment(
 
 
     private val selectGraphicCard = object : GraphicCardClickListener {
-        override fun graphicCardListener(item: GraphicCardItem) {
+        override fun graphicCardListener(item: CommonItem) {
             getGraphicCard.graphicCardListener(item)
             dismiss()
         }

@@ -1,5 +1,5 @@
 package space.arkady.recyclerhomework.domain.domain.models
 
-data class GraphicCardItem(
+data class CommonItem(
     val item: String
 )
