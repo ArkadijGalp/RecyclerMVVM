@@ -5,11 +5,11 @@ import space.arkady.recyclerhomework.data.GraphicCardRepositoryImplement
 import space.arkady.recyclerhomework.data.MonitorRepositoryImplement
 import space.arkady.recyclerhomework.data.OperationSystemRepositoryImplement
 import space.arkady.recyclerhomework.domain.domain.*
-import space.arkady.recyclerhomework.domain.domain.clickListener.CommonInteractor
+import space.arkady.recyclerhomework.domain.domain.interactor.CommonInteractor
 import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
 val domainModule = module {
-    /*    val q1 = qualifier("OperationSystem")
+/*    val q1 = qualifier("OperationSystem")
     val q2 = qualifier("Monitor")
     val q3 = qualifier("GraphicCard")*/
 

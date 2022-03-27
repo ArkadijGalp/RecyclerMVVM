@@ -25,11 +25,9 @@
         android:id="@+id/button_operationSystemtoGraphicCard"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="396dp"
-        android:clickable="true"
         android:text="@string/move_to_graphiccards_list"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/showOperationSystemList" />
 </androidx.constraintlayout.widget.ConstraintLayout>

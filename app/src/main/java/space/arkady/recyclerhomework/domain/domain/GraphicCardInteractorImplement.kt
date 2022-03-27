@@ -1,6 +1,6 @@
 package space.arkady.recyclerhomework.domain.domain
 
-import space.arkady.recyclerhomework.domain.domain.clickListener.CommonInteractor
+import space.arkady.recyclerhomework.domain.domain.interactor.CommonInteractor
 import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
 class GraphicCardInteractorImplement(

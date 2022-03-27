@@ -3,7 +3,7 @@ package space.arkady.recyclerhomework.presentation.recycler.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import space.arkady.recyclerhomework.domain.domain.clickListener.CommonInteractor
+import space.arkady.recyclerhomework.domain.domain.interactor.CommonInteractor
 import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
 class SharedViewModelData(private val interactor: CommonInteractor<CommonItem>) : ViewModel() {
