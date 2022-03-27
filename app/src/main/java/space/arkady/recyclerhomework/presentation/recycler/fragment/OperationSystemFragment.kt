@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_operationsystem.*
-import kotlinx.android.synthetic.main.fragment_order.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import space.arkady.recyclerhomework.R
-import space.arkady.recyclerhomework.domain.domain.models.Brand
+import space.arkady.recyclerhomework.domain.domain.models.BrandOperationSystem
 import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 import space.arkady.recyclerhomework.presentation.recycler.ItemClickListener
 import space.arkady.recyclerhomework.presentation.recycler.extensionFragment.openFragment
@@ -32,8 +31,8 @@ class OperationSystemFragment : Fragment(R.layout.fragment_operationsystem) {
         button_operationSystemtoGraphicCard.setOnClickListener {
             when {
                 checkEmptyField() -> showToast("Select Operation System")
-                showOperationSystemList.text.equals("WINDOWS") -> Brand.WINDOWS
-                showOperationSystemList.text.equals("MACOS") -> Brand.MACOS
+                showOperationSystemList.text.equals("WINDOWS") -> BrandOperationSystem.WINDOWS
+                showOperationSystemList.text.equals("MACOS") -> BrandOperationSystem.MACOS
             }
         }
         sharedViewModel.operationSystem.observe(viewLifecycleOwner) {
@@ -52,8 +51,8 @@ class OperationSystemFragment : Fragment(R.layout.fragment_operationsystem) {
     }
 
     private val getItem = object : ItemClickListener {
-        override fun itemClickListener(itemClick: CommonItem) {
-showOperationSystemList.setText()
+        override fun itemClickListener(clickItem: CommonItem) {
+            showOperationSystemList.setText(clickItem.item) //как это делать в случае с брендом
         }
     }
 }

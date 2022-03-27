@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.fragment_graphiccard.*
 import kotlinx.android.synthetic.main.fragment_monitor.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import space.arkady.recyclerhomework.R
-import space.arkady.recyclerhomework.domain.domain.models.Brand
+import space.arkady.recyclerhomework.domain.domain.models.BrandMonitor
 import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 import space.arkady.recyclerhomework.presentation.recycler.ItemClickListener
 import space.arkady.recyclerhomework.presentation.recycler.extensionFragment.openFragment
@@ -33,11 +33,11 @@ class MonitorFragment : Fragment(R.layout.fragment_monitor) {
         button_monitorToPeriphery.setOnClickListener {
             when {
                 checkEmptyField() -> showToast("Select a monitor")
-                showgraphicCardList.text.equals("LG") -> Brand.LG
-                showgraphicCardList.text.equals("SAMSUNG") -> Brand.SAMSUNG
-                showgraphicCardList.text.equals("ACER") -> Brand.ACER
-                showgraphicCardList.text.equals("DELL") -> Brand.DELL
-                showgraphicCardList.text.equals("GIGABYTE") -> Brand.GIGABYTE
+                showgraphicCardList.text.equals("LG") -> BrandMonitor.LG
+                showgraphicCardList.text.equals("SAMSUNG") -> BrandMonitor.SAMSUNG
+                showgraphicCardList.text.equals("ACER") -> BrandMonitor.ACER
+                showgraphicCardList.text.equals("DELL") -> BrandMonitor.DELL
+                showgraphicCardList.text.equals("GIGABYTE") -> BrandMonitor.GIGABYTE
             }
         }
         sharedViewModel.monitor.observe(viewLifecycleOwner) {

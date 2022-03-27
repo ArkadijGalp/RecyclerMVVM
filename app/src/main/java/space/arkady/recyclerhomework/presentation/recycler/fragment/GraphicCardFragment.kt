@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_graphiccard.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import space.arkady.recyclerhomework.R
-import space.arkady.recyclerhomework.domain.domain.models.Brand
+import space.arkady.recyclerhomework.domain.domain.models.BrandGraphicCard
 import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 import space.arkady.recyclerhomework.presentation.recycler.ItemClickListener
 import space.arkady.recyclerhomework.presentation.recycler.extensionFragment.openFragment
@@ -35,8 +35,8 @@ class GraphicCardFragment : Fragment(R.layout.fragment_graphiccard) {
         button_GraphicCardToMonitor.setOnClickListener {
             when {
                 checkEmptyField() -> showToast("Select Graphic Card")
-                showgraphicCardList.text.equals("NVIDIA") -> Brand.NVIDIA
-                showgraphicCardList.text.equals("AMD") -> Brand.AMD
+                showgraphicCardList.text.equals("NVIDIA") -> BrandGraphicCard.NVIDIA
+                showgraphicCardList.text.equals("AMD") -> BrandGraphicCard.AMD
             }
         }
 
@@ -56,6 +56,4 @@ class GraphicCardFragment : Fragment(R.layout.fragment_graphiccard) {
             showgraphicCardList.setText(itemClick.item)
         }
     }
-
-
 }

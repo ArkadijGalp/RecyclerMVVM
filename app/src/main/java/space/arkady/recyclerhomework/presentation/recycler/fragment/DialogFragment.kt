@@ -42,7 +42,7 @@ class DialogFragment(getItem: ItemClickListener) : BottomSheetDialogFragment() {
     override fun onStart() {
         super.onStart()
 
-        sharedViewModelData.sharedLiveData.observe(viewLifecycleOwner){ listItem->
+        sharedViewModelData.sharedLiveData.observe(viewLifecycleOwner) { listItem ->
             adapter.submitCardList(listItem)
         }
 

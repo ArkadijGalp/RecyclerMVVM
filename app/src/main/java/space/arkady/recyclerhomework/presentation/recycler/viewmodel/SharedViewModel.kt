@@ -3,8 +3,7 @@ package space.arkady.recyclerhomework.presentation.recycler.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import space.arkady.recyclerhomework.domain.domain.models.Brand
-import space.arkady.recyclerhomework.domain.domain.models.User
+import space.arkady.recyclerhomework.domain.domain.models.*
 
 class SharedViewModel() : ViewModel() {
 
@@ -16,26 +15,26 @@ class SharedViewModel() : ViewModel() {
     }
 
 
-    val operationSystem: LiveData<Brand> get() = _operationSystem
-    private val _operationSystem = MutableLiveData<Brand>()
+    val operationSystem: LiveData<BrandOperationSystem> get() = _operationSystem
+    private val _operationSystem = MutableLiveData<BrandOperationSystem>()
 
-    fun setOperationSystem(operationSystem: Brand) {
+    fun setOperationSystem(operationSystem: BrandOperationSystem) {
         _operationSystem.value = operationSystem
     }
 
 
-    val graphicCard: LiveData<Brand> get() = _graphicCard
-    private val _graphicCard = MutableLiveData<Brand>()
+    val graphicCard: LiveData<BrandGraphicCard> get() = _graphicCard
+    private val _graphicCard = MutableLiveData<BrandGraphicCard>()
 
-    fun setGraphicCard(graphicCard: Brand) {
+    fun setGraphicCard(graphicCard: BrandGraphicCard) {
         _graphicCard.value = graphicCard
     }
 
 
-    val monitor: LiveData<Brand> get() = _monitor
-    private val _monitor = MutableLiveData<Brand>()
+    val monitor: LiveData<BrandMonitor> get() = _monitor
+    private val _monitor = MutableLiveData<BrandMonitor>()
 
-    fun setMonitor(monitor: Brand) {
+    fun setMonitor(monitor: BrandMonitor) {
         _monitor.value = monitor
     }
 }
