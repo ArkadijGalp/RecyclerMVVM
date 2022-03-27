@@ -1,8 +1,9 @@
 package space.arkady.recyclerhomework.domain.domain
 
+import space.arkady.recyclerhomework.domain.domain.clickListener.CommonInteractor
 import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
-class MonitorInteractor(
+class MonitorInteractorImplement(
     private val repository: MonitorRepository
 ) : CommonInteractor<CommonItem> {
     override fun getItem(): List<CommonItem> {

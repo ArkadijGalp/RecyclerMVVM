@@ -5,15 +5,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import space.arkady.recyclerhomework.domain.domain.models.CommonItem
 
-class GraphicCardAdapter(private val getCardClickItem: GraphicCardClickListener) :
-    RecyclerView.Adapter<GraphicCardViewHolder>() {
+class RecyclerAdapter(private val getCardClickItem: ItemClickListener) :
+    RecyclerView.Adapter<RecyclerViewHolder>() {
 
     private var items: List<CommonItem> = emptyList()
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GraphicCardViewHolder {
-        return GraphicCardViewHolder.newInstance(parent, getCardClickItem)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
+        return RecyclerViewHolder.newInstance(parent, getCardClickItem)
     }
 
-    override fun onBindViewHolder(holder: GraphicCardViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         holder.bindItem(items[position])
     }
 

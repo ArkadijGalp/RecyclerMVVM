@@ -7,5 +7,7 @@ enum class Brand {
     SAMSUNG,
     GIGABYTE,
     ACER,
-    DELL
+    DELL,
+    WINDOWS,
+    MACOS
 }
